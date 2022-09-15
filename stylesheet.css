@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+}
+
+/*Margin 0 for all because there is some natural small margin, apparently?*/
+
+section {
+    background-color: white;
+    margin: auto;
+    margin-top: 30px;
+    width: 80%;
+}
+
+h2 {
+    border-radius: 3em;
+    border: 1em;
+    border-color: black;
+    background-color: rgb(162, 188, 197);
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 1em;
+    font-family: "Poppins", sans-serif;;
+}
+
+/*h2 and h3 use the custom Poppins font I got off Google*/
+
+h3 {
+    border-left: 0.5em;
+    border-left-style: solid;
+    border-left-color: rgb(0, 212, 170);
+    background-color: rgb(0, 175, 140);
+    text-align: center;
+    padding: 4px;
+    margin-bottom: 1em;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+/*overflow wrap for paragraph, as required. But wasn't really needed much, from what I saw.*/
+
+p {
+    overflow-wrap: break-word;
+    padding: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*I used width: 80% for a bunch of stuff because it makes the page look a bit better, more focused...
+it it's spread from side to side it doesn't really work as much with the content it has. Also I did this because I tried to
+have a background image that showed at the sides of the page, but I scrapped that because I couldn't get the footer to have
+a color background, so it had the background image and thus it was hard to read the text on it (and it also looked ugly)*/
+
+footer {
+    width: 80%;
+}
+
+/*List style type to remove those annoying bullet points that unordered lists are apparently too much into*/
+
+ul.nostyle {
+    list-style-type: none;
+}
+
+/*navbar magic*/
+
+.navbar > ul {
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+/*because I have display: block I'm pretty sure the height thing is needed to make them be in line, I'm not too sure though*/
+
+.navbar > ul > li {
+    height: 100%;
+}
+
+.navbar {
+    background-color: rgb(59, 105, 122);
+    height: 60px;
+    margin-bottom: 30px;
+}
+
+li > a {
+    display: block;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+/*:hover makes buttons look really interactive, not gonna lie*/
+
+li > a:hover{
+    background-color: rgb(45, 80, 93);
+}
+
+/*as i said, the width thing repeats itself a few times*/
+
+.body {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+/*smallcontainer is for the panels in the FAQs page. Pretty neat, right?*/
+
+.smallcontainer {
+    padding: 15px;
+    margin: 10px;
+    border: 5px;
+    border: rgb(61, 107, 107);
+    border-radius: 5px;
+    border-style: solid;
+    background-color: rgb(131, 231, 231);
+    width: 30%;
+    height: auto;
+}
+
+/*just flex set up to make things look more organized. Used for the panels in FAQ*/
+
+.flex {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*the floats were mostly used for the nav bar but saw use in the footer as well*/
+
+.floatleft{
+    float: left;
+}
+
+.floatright{
+    float: right;
+}
+
+/*i did definitions for both the 2 images i used*/
+
+.mainpageimage {
+    width: 100%;
+    height: 80vh;
+    border: 10px;
+    border-style: groove;
+    border-color: rgb(20, 83, 83);
+}
+
+.secondpageimage {
+    width: 30%;
+    height: auto;
+    border: 10px;
+    border-style: groove;
+    border-color: rgb(20, 83, 83);
+}
+
+/*the one on the left part of the navbar*/
+
+.icon {
+    height: 100%;
+    width: auto;
+}
+
+/*what it says on the tin. Grey is really great as a color for these parts of the page.*/
+
+.footertext {
+    font-size: 12px;
+    color: grey;
+}
+
+/*noscript for when you have no(java)script... get it? This is probably the most least good looking part despite my efforts, but
+you usually shouldn't have this screen, and if you do, it's not really my fault if you dwell too much on it, is it?*/
+
+noscript {
+    position: fixed;
+    top: 40%;
+    right: 35%;
+    width: 30%;
+    height: 20%;
+    border: 3px solid black;
+    background-color: white;
+    text-align: center;
+    font-size: 30px;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*The fabled media query. Just makes things more readable, and changes the color of the navbar so it shows that yes, stuff is
+changing?*/
+
+@media only screen and (max-width:768px){
+    p {
+        font-size: 28px;
+    }
+    .navbar {
+        background-color: red;
+        height: 50px;
+        margin-bottom: 20px;
+    }
+    li > a:hover{
+        background-color: rgb(175, 0, 0);
+    }
+}

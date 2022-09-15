@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheet.css">
+        <!--Thank god for finding this font. Used in headers-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <!--JQuery thing I need to have for the scripts-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#interactable").click(function(){
+                    var src = $("#interactable").attr('src');
+                    //if 0, switch to 1
+                    if(src=="images/0.jpg"){
+                        $("#interactable").attr('src',"images/1.jpg");
+                    }
+                    //otherwise, switch to 2
+                    else if(src=="images/1.jpg"){
+                        $("#interactable").attr('src',"images/2.webp");
+                    }
+                    //yep, you guessed it. If it's 2, move to 3, erm, 0
+                    else {
+                        $("#interactable").attr('src',"images/0.jpg");
+                    }
+                });
+            });
+        </script>
+    </head>
+    
+    <body>
+        <nav class="navbar">
+            <img src="images/8.jpg" alt="Navbar icon" class="icon floatleft">
+            <ul class="nostyle">
+                <li class="floatright"><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">WHO</a></li>
+                <li class="floatright"><a href="faq.html">FAQ</a></li>
+                <li class="floatright"><a href="info.html">Info</a></li>
+                <li class="floatright"><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+            <!--The image. Click to switch to other image. Refer to script above.-->
+            <div class="body">
+                <img id="interactable" class="mainpageimage" src="images/0.jpg" alt="COVID image">
+            </div>
+            <!--Just the About Us area. Not much about it.-->
+            <section>
+                <h2>About Us</h1>
+                <p>The #anticovid-19 team aims to help people during the difficult times of the pandemic in order to prevent negative results and impacts such as life loss, monetary and goods through corruption and scams, etc. The main purpose is to help those in need, the poor, the ones without medical insurance, those in difficult moments and terrains etc. Its that simple, just get informed by the verified information (real time) through our blogs, website, social media, email or contact us by phone and fax. Got anything new or interesting, give us a call, we will deal with it in order to make your voice to be heared loudly. Navigate through our menus or slideshow. As always, stay safe.</p>
+            </section>
+            <!--honestly, I'd have put a background but I couldn't get footers to have background colors, soooo, I skipped that-->
+            <footer>
+                <div class="footerdiv">
+                    <p class="floatright footertext">© 2022 #anticovid-19. All Rights Reserved.</p>
+                <div>
+            </footer>
+            <!--noscript message that displays when you don't have JS enabled-->
+            <noscript>You do not have Javascript enabled!</noscript>
+    </body>
+
+</html>
